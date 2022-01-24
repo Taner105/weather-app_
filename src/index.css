@@ -1,13 +1,101 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+:root{
+    --color-header: #ffe978;
+    --header-font-size: 48px;
+    --img-result-background: #474747;
+    --city-font-size: 64px;
+    --degree-font-size: 96px;
+    --statu-font-size: 36px
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.background{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -10;
+    left: 0;
+    top: 0;
+}
+.background img{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: -5;
+    right: 0;
+    bottom: 0;
+}
+.overlay{
+   position: absolute;
+   z-index: -3; 
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0,0,0,0.4);
+
+}
+#header{
+    margin-top: 40px;
+    text-align: center;
+    color: var(--color-header);
+    font-size: var(--header-font-size);
+
+}
+.search{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.search-input{
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 20px;
+    border: none;
+    font-size: 22px;
+    background-color: #474747;
+    color: #fff;
+}
+.result{
+    position: relative;
+    margin-top: 100px;
+}
+.city{
+    color: #fff;
+    font-size: var(--city-font-size);
+    text-align: center;
+}
+.detail {
+  margin-top: 60px;
+  width: 100%;
+  height: 250px;
+  background-color: var(--img-result-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.degree{
+    color: #fff;
+    font-size: var(--degree-font-size);
+    font-weight: bold;
+
+}
+.status{
+    color: #fff;
+    font-size:var(--statu-font-size) ;
+    margin-top: 20px;
+
+}
+@media screen and (min-width: 950px) {
+    .container-app {
+        width: 60%;
+        height: 100vh;
+        margin: 0 auto;
+        background-color: rgba(3,3,3,0.67);
+    }
 }
